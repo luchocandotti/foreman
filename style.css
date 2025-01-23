@@ -1,0 +1,317 @@
+/* esto resetea todo en la página */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #131313;
+    color: #FFFFFF;
+    font-family: "Albert Sans", sans-serif;
+    font-size: 16pt;
+    font-weight: normal;
+    line-height: 1.3em;
+    margin: 0;
+}
+
+
+/* FONDO IMAGEN TECLADO */
+.bg{
+    width: 100%;
+    height: 50%;
+    background-image: url(./img/for_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    box-sizing: content-box;
+}
+
+/* TEXTURA */
+.texture{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/for_bg_tx.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    box-sizing: content-box;
+    mix-blend-mode: screen;
+    opacity: 30%;
+
+}
+
+/* Agregué div con degradé para difuminar el corte de la foto */
+.bottom {
+    display: flex;
+    height: 100%;
+    align-items: end;
+
+ }
+.bg-linear {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(#13131300, #131313);
+
+ }
+
+h1{
+    line-height: 48pt;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 8pt;
+    font-weight: 200;
+}
+
+p{
+    line-height: 24pt;
+    font-weight: 300;
+    color: #D0D2D3;
+}
+
+
+/* aplicar estilo a todos los links de la página */
+a{
+    text-decoration: none;
+    color: #9070A8;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.container{
+    width: 80%;
+    max-width: 955px;
+    margin: auto;
+}
+
+/* MENU */
+.top{
+    margin-top: 100px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items:start;
+}
+
+.logo{
+    display: flex;
+    img{
+        height: auto;
+        width: 230px;
+    }
+}
+
+.menu{
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu li{
+    margin-left: 20px;
+    margin-top: -5px;
+    list-style:none;
+}
+
+#m{
+    display: none;
+}
+
+/* PRIMERA SECCIÓN CONTENEDOR */
+.intro{
+    display: flex;
+    width: 100%;
+    align-items:end;
+    margin: 100px 0 100px 0;
+}
+
+.intro-txt{
+    width: 50%;
+    padding-right: 30px;
+    p{
+        margin-bottom: 8px;
+    }
+}
+
+
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .intro{
+        flex-direction: column;
+        justify-content: left;
+        
+    }
+    .intro-txt{
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 30px;
+    }
+    .menu li{
+        display: none;
+    }
+    #m{
+        display: contents;
+        font-size: 40pt;
+        font-weight: normal;
+    }
+
+}
+
+
+
+
+
+/* .button{
+    background-color: #195798;
+    color: white;
+    font-size: 14px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #A8D2FF;
+        color: #195798;
+    }
+} */
+ 
+/* .formulario{
+    margin: 45px 0 60px 0;
+}
+
+.formulario .form-group{
+    padding-bottom: 15px;
+}
+
+.formulario input[type="text"], .formulario textarea{
+    padding: 20px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px #ccc solid;
+    box-sizing:border-box;
+
+    &:focus {
+        background-color: #e5f0fc;
+        outline: none;
+        border: 1px #A8D2FF solid;
+      }
+}
+
+.formulario textarea{
+    height: 200px;
+    resize: none;
+}
+
+#foot{
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-bottom: 55px;
+} */
+
+/* .form-bt{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+
+    p{
+        text-align: right;
+        color: #195798;
+    }
+
+    a{
+        color:#195798;
+    }
+} */
+
+/* #main-block{
+    float:left;
+    width: 70%;
+    padding-right: 20px;
+    box-sizing:border-box;
+    margin-bottom: 100px;
+
+}
+
+#sidebar{
+    float:right;
+    width: 30%;
+    padding: 20px;
+    background-color: #646464;
+    color: white;
+    box-sizing:border-box;
+    margin-bottom: 100px;
+} */
+
+
+
+
+
+/* .lista li:first-child{
+    background: red;
+}
+
+.lista li:last-child{
+    background: blue;
+}
+
+.lista li:nth-child(3){
+    background: yellow;
+}
+
+.lista{
+    margin-bottom: 200px;
+} */
+
+/*
+tener en cuenta la seudo clase has
+es una especie de condicional relativo al hijo
+
+.container:has(clase:seudo-clase){
+    acá va una propiedad para el elemento;
+}
+
+Por ejemplo
+(boton-rojo:hover)
+
+podemos modificar otro hijo dentro del padre
+
+.container:has(boton-rojo:hover).hijo{
+    width:200%;
+}
+
+*/
+
+/*
+NESTING
+Podés seleccionar elementos dentro de otro elemento como si fuera JS y aplicar la opci{on de hover dentro de la misma clase
+
+.container{
+    width: 100%;
+
+    .img-radius: 50%;
+
+    &:hover{
+        border-radius: 0;
+    }
+}
+
+
+*/
