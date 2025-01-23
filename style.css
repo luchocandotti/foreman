@@ -111,6 +111,7 @@ a{
 
 .logo{
     display: flex;
+    padding-left: 5px;
     img{
         height: auto;
         width: 230px;
