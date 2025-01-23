@@ -2,11 +2,12 @@
   var userLang = navigator.language.slice(0,2) || navigator.userLanguage.slice(0,2);
   
       if (userLang == 'pt' && window.location.pathname != '/indexPt.html') {
-          window.location.href = 'indexPt.html';
-      };
+          window.location.href = 'indexPt.html'
+      }
   //alert("The language is: " + userLang);
   //console.log(window.location);
   })();
+
 
 
 
