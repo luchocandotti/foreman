@@ -37,6 +37,8 @@ body{
 
 /* TEXTURA */
 .texture{
+    position: fixed;
+    top: 0px;
     width: 100%;
     height: 100%;
     background-image: url(./img/for_bg_tx.jpg);
@@ -44,9 +46,7 @@ body{
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;
-    /* NO ESTÁ TOMANDO EL ALTO TOTAL DE LA PAGINA*/
-    position: absolute;
-    top: 0px;
+    /* SOLUCIONADOOOOOOOO */
     z-index: -1;
     box-sizing: content-box;
     mix-blend-mode: screen;
@@ -186,15 +186,32 @@ a{
 .perfiles{
     width: 50%;
     position: relative;
+    display: flex;
+    flex-direction:column;
+    justify-content: end;
+    height: 600px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
     margin: 50px;
     /* border-width: 1px 1px 1px 1px;
     border-style: solid;
     border-color: #9070A8;
     margin-left: -1px; hace que se superponga la línea y no quede doble */
     box-sizing:border-box;
+
+    h2, p{
+        text-align: center;
+        margin: 10px;
+        z-index: 1;
+    }
+    p {
+        font-size: 12pt;
+    }
 }
 
 .perfil{
+    position: relative;
     margin-bottom: 20px;
     filter:drop-shadow(1px 1px 10px #3e3e3e9d);
 }
@@ -205,7 +222,7 @@ a{
 #perfil1{
     position: absolute;
     top: 0px;
-    z-index: 0;
+    z-index: 1;
     opacity: 100%;
 }
 #perfil2{
@@ -266,6 +283,9 @@ a{
     .perfiles{
         width: 100%;
         margin: 0;
+    }
+    .perfil{
+        padding: 35px;
     }
 
 }
