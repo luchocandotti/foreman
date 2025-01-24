@@ -31,7 +31,7 @@ body{
 
     position: absolute;
     top: 0px;
-    z-index: -1;
+    z-index: -2;
     box-sizing: content-box;
 }
 
@@ -40,9 +40,11 @@ body{
     width: 100%;
     height: 100%;
     background-image: url(./img/for_bg_tx.jpg);
+    background-color: #9070A8;
     background-size: cover;
     background-position: center center;
-
+    background-repeat: repeat;
+    /* NO ESTÁ TOMANDO EL ALTO TOTAL DE LA PAGINA*/
     position: absolute;
     top: 0px;
     z-index: -1;
@@ -57,23 +59,38 @@ body{
     display: flex;
     height: 100%;
     align-items: end;
-
  }
 .bg-linear {
     width: 100%;
     height: 300px;
     background: linear-gradient(#13131300, #131313);
-
  }
 
+/* texto */
 h1{
     line-height: 48pt;
     font-weight: 500;
 }
 
+h2{
+    font-size: 16pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9070A8;
+    margin-bottom: 50px;
+}
+
+h3{
+    font-size: 16pt;
+    font-weight: 300;
+    color: #9070A8;
+    margin-bottom: 100px;
+}
+
 h4{
     font-size: 8pt;
     font-weight: 200;
+    margin-bottom: 30px;
 }
 
 p{
@@ -82,8 +99,7 @@ p{
     color: #D0D2D3;
 }
 
-
-/* aplicar estilo a todos los links de la página */
+/* estilo links */
 a{
     text-decoration: none;
     color: #9070A8;
@@ -108,7 +124,7 @@ a{
     justify-content:space-between;
     align-items:start;
 }
-
+/* izquierda */
 .logo{
     display: flex;
     padding-left: 5px;
@@ -118,6 +134,7 @@ a{
     }
 }
 
+/* derecha */
 .menu{
     display: flex;
     text-transform: uppercase;
@@ -130,11 +147,12 @@ a{
     list-style:none;
 }
 
+/* icono móvil */
 #m{
     display: none;
 }
 
-/* PRIMERA SECCIÓN CONTENEDOR */
+/* PRIMERA SECCIÓN */
 .intro{
     display: flex;
     width: 100%;
@@ -150,14 +168,33 @@ a{
     }
 }
 
+/* SEGUNDA SECCIÓN */
+.about{
+    display: flex;
+    width: 100%;
+    align-items:start;
+    margin: 100px 0 100px 0;
+}
+
+.about-txt{
+    width: 50%;
+    border: 1px solid #9070A8;
+    padding: 50px 50px 50px 50px;
+    box-sizing:border-box;
+}
+
+.perfiles{
+    width: 50%;
+    border: 1px solid #9070A8;
+    box-sizing:border-box;
+}
 
 
 /* RESPONSIVE */
 @media(max-width:900px){
     .intro{
         flex-direction: column;
-        justify-content: left;
-        
+        justify-content: left; 
     }
     .intro-txt{
         width: 100%;
@@ -172,147 +209,20 @@ a{
         font-size: 40pt;
         font-weight: normal;
     }
-
-}
-
-
-
-
-
-/* .button{
-    background-color: #195798;
-    color: white;
-    font-size: 14px;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-
-    &:hover{
-        background-color: #A8D2FF;
-        color: #195798;
+    .about{
+        flex-direction: column;
+        justify-content: left; 
     }
-} */
- 
-/* .formulario{
-    margin: 45px 0 60px 0;
-}
-
-.formulario .form-group{
-    padding-bottom: 15px;
-}
-
-.formulario input[type="text"], .formulario textarea{
-    padding: 20px;
-    font-size: 14px;
-    width: 100%;
-    border: 1px #ccc solid;
-    box-sizing:border-box;
-
-    &:focus {
-        background-color: #e5f0fc;
-        outline: none;
-        border: 1px #A8D2FF solid;
-      }
-}
-
-.formulario textarea{
-    height: 200px;
-    resize: none;
-}
-
-#foot{
-    font-size: 14px;
-    color: #aaaaaa;
-    margin-bottom: 55px;
-} */
-
-/* .form-bt{
-    display: flex;
-    width: 100%;
-    justify-content:space-between;
-    align-items: center;
-
-    p{
-        text-align: right;
-        color: #195798;
+    .about-txt{
+        width: 100%;
+        margin-bottom: 30px;
+        box-sizing:border-box;
+    }
+    h3{
+        margin-bottom: 0px;
+    }
+    .perfiles{
+        width: 100%;
     }
 
-    a{
-        color:#195798;
-    }
-} */
-
-/* #main-block{
-    float:left;
-    width: 70%;
-    padding-right: 20px;
-    box-sizing:border-box;
-    margin-bottom: 100px;
-
 }
-
-#sidebar{
-    float:right;
-    width: 30%;
-    padding: 20px;
-    background-color: #646464;
-    color: white;
-    box-sizing:border-box;
-    margin-bottom: 100px;
-} */
-
-
-
-
-
-/* .lista li:first-child{
-    background: red;
-}
-
-.lista li:last-child{
-    background: blue;
-}
-
-.lista li:nth-child(3){
-    background: yellow;
-}
-
-.lista{
-    margin-bottom: 200px;
-} */
-
-/*
-tener en cuenta la seudo clase has
-es una especie de condicional relativo al hijo
-
-.container:has(clase:seudo-clase){
-    acá va una propiedad para el elemento;
-}
-
-Por ejemplo
-(boton-rojo:hover)
-
-podemos modificar otro hijo dentro del padre
-
-.container:has(boton-rojo:hover).hijo{
-    width:200%;
-}
-
-*/
-
-/*
-NESTING
-Podés seleccionar elementos dentro de otro elemento como si fuera JS y aplicar la opci{on de hover dentro de la misma clase
-
-.container{
-    width: 100%;
-
-    .img-radius: 50%;
-
-    &:hover{
-        border-radius: 0;
-    }
-}
-
-
-*/
