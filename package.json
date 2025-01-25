@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/luchocandotti/foreman#readme",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.1"
   }
 }

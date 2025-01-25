@@ -1,3 +1,5 @@
+
+
 (function () { /* esto es una función autoinvocada, sin nombre por eso se invoca al final con () */
   var userLang = navigator.language.slice(0,2) || navigator.userLanguage.slice(0,2);
   
@@ -65,3 +67,4 @@ button2.addEventListener("click", (event) => {
     behavior: "smooth",
   });
 });
+
