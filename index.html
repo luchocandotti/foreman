@@ -6,9 +6,14 @@
     <title>FOREMAN</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="./script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="FOREMAN"/>
+    <meta property="og:url" content="https://www.foreman.com.ar"/>
+    <meta property="og:image" content="https://www.foreman.com.ar/img/for.jpg"/>
+    <meta property="og:description" content="Expert custom software implementation for AI-Driven business process automation"/>
 </head>
 <body>
     <div class="container">
@@ -34,7 +39,17 @@
                 <p>We specialize in creating tailored software solutions to streamline and enhance your business operations, using advanced artificial intelligence to automate processes and improve efficiency. Trust us to transform your enterprise with innovative, reliable, and cost-effective technology solutions.</p>
             </div>
         </div>
- <!-- about us -->
+ <!-- clients -->
+        <div class="clients">
+            <img class="brands brand1" src="./img/brand_1.svg"/>
+            <img class="brands brand2" src="./img/brand_2.svg"/>
+            <img class="brands brand3" src="./img/brand_3.svg"/>
+            <img class="brands brand4" src="./img/brand_4.svg"/>
+            <img class="brands brand5" src="./img/brand_5.svg"/>
+            <img class="brands brand6" src="./img/brand_6.svg"/>
+        </div>
+
+<!-- about us -->
         <div class="about">
             <div class="about-txt">
                 <h2>about us</h2>
@@ -58,63 +73,98 @@
                 <div id="perfil4" class="perfil">
                     <img src="./img/perfil_4.jpg"/>
                 </div>
-                <h2>Ignacio Vallejos</h2>
-                <p>{ Computer Systems Infrastructure Engineer }</p>
-                <!-- <div class="clr"></div> -->
-                <!-- no logro hacer que el div perfiles tenga alto pues su display es relative -->
+                <div class="titulos">
+                    <div id="titulo1">
+                        <h2>Ignacio Vallejos</h2>
+                        <p>{ Computer Systems Infrastructure Engineer }</p>
+                    </div>
+                    <div id="titulo2">
+                        <h2>Gabriel Gomez</h2>
+                        <p>{ Marketing Engineer }</p>
+                    </div>
+                    <div id="titulo3">
+                        <h2>Luciano Candotti</h2>
+                        <p>{ Graphic Designer & Front End Developer } </p>
+                    </div>
+                    <div id="titulo4">
+                        <h2>Leonardo Gorosito</h2>
+                        <p>{ Full Stack Developer } </p>
+                    </div>
+                    <p id="alert">click on the picture to scroll profiles</p>
+                </div>
                 
+                <!-- no logro hacer que el div perfiles tenga alto pues su display es relative -->    
             </div>
+            <div class="clr"></div>
         </div>
+<!-- services -->
+        <h5>What can we do for you?</h5>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="primero">
+                <label for="primero">Web Development</label>
+                <div class="content">
+                    <p>Web Development is the process of creating websites and web applications for the Internet. It encompasses a variety of tasks and disciplines, including web design, web content creation, client-side/server-side scripting, and network security configuration.</p>
+                
+                    <p class="dos">This field combines creativ ity with technical skills to build and maintain websites that are visually appealing, user-friendly, and efficient.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="segundo">
+                <label for="segundo">Development</label>
+                <div class="content">
+                    <p>Our development analysis services include a thorough evaluation of your current systems and processes. We identify areas for improvement and provide detailed recommendations to optimize your technology stack. By understanding your unique business needs, we design tailored solutions that drive innovation and efficiency.</p>
 
-    
- <!-- formulario -->
-     <!--
-        <form class="formulario" action="https://api.web3forms.com/submit" method="POST">
-            <h2>contacto</h2>
+                    <p class="dos">We offer end-to-end infrastructure implementation services, from planning and design to deployment and management. Our team of experts ensures that your IT infrastructure is robust, scalable, and secure. We work with leading technologies to provide you with the best solutions that support your business growth and operational needs.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="tercero">
+                <label for="tercero">Marketing & Sales</label>
+                <div class="content">
+                    <p>Our marketing expert create tailored strategies that align with your business goals. We leverage a mix of digital and traditional marketing techniques to reach your target audience effectively. From social media campaigns and content marketing to SEO and email marketing, we ensure that your brand stands out in a crowded market. Our data-driven approach allows us to continuously optimize campaigns for better performance and ROI.</p>
 
-            <input type="hidden" name="access_key" value="66fb26be-0b00-41cc-aad1-df41d8ad900f">
-            
-            <div class="form-group">
-                <input type="text" name="nombre" placeholder="Nombre y apellido:" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="email" placeholder="Email:" required>
-            </div>
-            <div class="form-group">
-                <textarea name="mensaje" placeholder="Mensaje:" required></textarea>
-            </div>
-            <div class="form-bt">
-                <input class="button" type="submit" value="Enviar" name="">
-                <p><b>Ruta Sexta Km 4.5</b> | ENC. PY <br>TEL: +595 992 352135</p>
-            </div>
-        </form>
-    -->
+                    <p class="dos">We provide end-to-end sales support, from lead generation and nurturing to closing deals and after-sales service. Our methodologies are designed to build strong relationships and trust with your customers, ensuring long-term business growth. We utilize cutting-edge tools and technologies to track performance and improve sales processes, making sure you achieve your revenue targets.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="cuarto">
+                <label for="cuarto">Design</label>
+                <div class="content">
+                    <p>Our UI design services focus on creating intuitive and engaging interfaces that make software easy to use and visually compelling. We prioritize user-centered design principles to ensure that every element, from buttons to icons, contributes to a seamless and enjoyable user experience. Our team of skilled designers works closely with you to understand your vision and translate it into a polished, professional interface.</p>
 
-<!-- grillas -->
-
-        <!--
-        <div id="main-block">
-            <h3>Heading 4</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, commodi doloribus aut velit, veniam quaerat cumque vitae, est inventore dolor quam.
-            </p>
-        </div>
-
-        <div id="sidebar">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, commodi doloribus aut velit, veniam quaerat cumque vitae, est inventore dolor quam.
-            </p>
-        </div>
-
-        <div class="clr"></div>
-
-        
-        <ul class="lista">
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
+                    <p class="dos">Beyond aesthetics, we prioritize user experience to ensure that your software is efficient and enjoyable to use. Our UX design process involves thorough research and testing to understand the needs and behaviors of your target audience. The result is software that is not only beautiful but also functional and user-friendly.</p>
+                </div>
+            </li>
         </ul>
-         -->
+
+ <!-- contacto -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-text">
+                    <h1>Get in touch!</h1>
+                    <p>Do you think our services can help you?</p>
+                    <p>Got questions, need support, or want to chat about a potential partnership? Reach out to us:</p>
+            </div>
+                <form  id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="NAME" required />
+                    </div>
+                    
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="EMAIL" required />
+                    </div>
+                <div class="form-row">
+                    <input type="text" name="company" placeholder="COMPANY NAME" />
+                </div>
+                
+                <div class="form-row">
+                    <textarea name="message" placeholder="MESSAGE" required></textarea>
+                </div>
+                <button id="submit" type="submit">SEND</button>
+                </form>
+            </div>
+        </section>
 
          <!-- firma -->
          <h4 id="foot">DESIGN & DEVELOP IN ARGENTINA</h4>
@@ -131,6 +181,37 @@
     </div>
 <!-- fondop de textura -->
     <div class="texture"></div>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+      
+        const supabaseUrl = 'https://kmewjzyxpimggffpogxo.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImttZXdqenl4cGltZ2dmZnBvZ3hvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzc3NDc2MjQsImV4cCI6MjA1MzMyMzYyNH0.uKS6m2MnLy2NyOvL2Z-oSFVDow1XJ1RZTNeUnypKmx4'; // Clave anon
+        const supabase = createClient(supabaseUrl, supabaseKey);
+      
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+      
+          const formData = new FormData(form);
+          const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            company: formData.get('company'),
+            message: formData.get('message'),
+          };
+      
+          const { error } = await supabase.from('contact_messages').insert([data]);
+      
+          if (error) {
+            console.error('Error al enviar el formulario:', error);
+            alert('Hubo un problema al enviar el formulario. Inténtalo nuevamente.');
+          } else {
+            alert('¡Formulario enviado con éxito!');
+            form.reset();
+          }
+        });
+      </script>
 
 
 </body>

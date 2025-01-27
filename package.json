@@ -1,0 +1,26 @@
+{
+  "name": "foreman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luchocandotti/foreman.git"
+  },
+  "author": "Foreman Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luchocandotti/foreman/issues"
+  },
+  "homepage": "https://github.com/luchocandotti/foreman#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.1"
+  }
+}
