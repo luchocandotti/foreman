@@ -102,7 +102,6 @@
             </div>
             <div class="clr"></div>
         </div>
-
 <!-- services -->
         <h5 id="seccion-services">What can we do for you?</h5>
         <ul class="accordion">
@@ -172,7 +171,6 @@
                 </form>
             </div>
         </section>
->>>>>>> dev
 
          <!-- firma -->
          <h4 id="foot">DESIGN & DEVELOP IN ARGENTINA</h4>
@@ -189,6 +187,37 @@
     </div>
 <!-- fondop de textura -->
     <div class="texture"></div>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+      
+        const supabaseUrl = 'https://kmewjzyxpimggffpogxo.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImttZXdqenl4cGltZ2dmZnBvZ3hvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzc3NDc2MjQsImV4cCI6MjA1MzMyMzYyNH0.uKS6m2MnLy2NyOvL2Z-oSFVDow1XJ1RZTNeUnypKmx4'; // Clave anon
+        const supabase = createClient(supabaseUrl, supabaseKey);
+      
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+      
+          const formData = new FormData(form);
+          const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            company: formData.get('company'),
+            message: formData.get('message'),
+          };
+      
+          const { error } = await supabase.from('contact_messages').insert([data]);
+      
+          if (error) {
+            console.error('Error al enviar el formulario:', error);
+            alert('Hubo un problema al enviar el formulario. Inténtalo nuevamente.');
+          } else {
+            alert('¡Formulario enviado con éxito!');
+            form.reset();
+          }
+        });
+      </script>
 
 
 </body>
