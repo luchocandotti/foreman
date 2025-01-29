@@ -34,6 +34,7 @@ body{
     top: 0px;
     z-index: -2;
     box-sizing: content-box;
+    transition: all 0.9s ease-in-out;
 }
 
 /* TEXTURA */
@@ -43,7 +44,6 @@ body{
     width: 100%;
     height: 100%;
     background-image: url(./img/for_bg_tx.jpg);
-    background-color: #9070A8;
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;

@@ -11,12 +11,14 @@ let sw = 1;
 button0.addEventListener("click", (event) => {
 if (sw==1) {
   document.getElementById('container').style.marginTop = "325px";
-  document.getElementById('movil').style.top = "0";
+  document.getElementById('back').style.top = "250px";
+  document.getElementById('movil').style.top = 0;
   document.getElementById("m").innerHTML = "<a href='#'>×</a>";
   sw = 2;
 } else {
   document.getElementById('movil').style.top = "-250px";
-  document.getElementById('container').style.marginTop = "0";
+  document.getElementById('container').style.marginTop = 0;
+  document.getElementById('back').style.top = 0;
   document.getElementById("m").innerHTML = "<a href='#'>=</a>";
   sw = 1;
 }
@@ -61,7 +63,7 @@ const button2m = document.getElementById("services-m");
 
 button2m.addEventListener("click", (event) => {
 window.scroll({
-  top: services.top-25,
+  top: services.top-50,
   behavior: "smooth",
 });
 document.getElementById('movil').style.top = "-250px";
@@ -84,9 +86,10 @@ const button3m = document.getElementById("contact-m");
 
 button3m.addEventListener("click", (event) => {
 window.scroll({
-  top: services.top+200,
+  top: contact.top+100,
   behavior: "smooth",
 });
+console.log(contact.top);
 document.getElementById('movil').style.top = "-250px";
 document.getElementById('container').style.marginTop = "0";
 document.getElementById("m").innerHTML = "<a href='#'>=</a>";
