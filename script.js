@@ -1,11 +1,28 @@
+
+// ----------------hidden + loader----------
+
+
+window.onload = function() {
+  setTimeout(function() {
+      document.getElementById("loader").style.opacity = "0";
+
+      setTimeout(function() {
+          document.getElementById("loader").style.display = "none"; 
+          document.getElementById("contentt").classList.add("show"); 
+      }, 1000); 
+  }, 4000); 
+};
+
+//------------------------------------------
+
 //Botones del menu que llevan a las secciones
 
-window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-});
 
+window.scroll({
+  top: 0,
+  left: 0,
+  behavior: "smooth",
+});
 const button0 = document.getElementById("m");
 let sw = 1;
 button0.addEventListener("click", (event) => {
@@ -94,45 +111,74 @@ button3m.addEventListener("click", (event) => {
 });
 
 //Reubicar el scroll de los servicios
-const button4 = document.getElementById("primero");
-const acordion1 = document.getElementById("uno").getBoundingClientRect();
 
-button4.addEventListener("click", (event) => {
-  window.scroll({
-    top: acordion1.top,
-    behavior: "smooth",
+const acordionElements = [
+  { buttonId: "primero", sectionId: "uno" },
+  { buttonId: "segundo", sectionId: "dos" },
+  { buttonId: "tercero", sectionId: "tres" },
+  { buttonId: "cuarto", sectionId: "cuatro" }
+];
+
+acordionElements.forEach(({ buttonId, sectionId }) => {
+  const button = document.getElementById(buttonId);
+  const section = document.getElementById(sectionId);
+
+  button.addEventListener("click", (event) => {
+    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+    window.scroll({
+      top: sectionPosition,
+      behavior: "smooth"
+    });
   });
 });
 
-const button5 = document.getElementById("segundo");
-const acordion2 = document.getElementById("dos").getBoundingClientRect();
 
-button5.addEventListener("click", (event) => {
-  window.scroll({
-    top: acordion2.top,
-    behavior: "smooth",
-  });
-});
 
-const button6 = document.getElementById("tercero");
-const acordion3 = document.getElementById("tres").getBoundingClientRect();
+// const button4 = document.getElementById("primero");//
+// const acordion1 = document.getElementById("uno").getBoundingClientRect();
 
-button6.addEventListener("click", (event) => {
-  window.scroll({
-    top: acordion3.top,
-    behavior: "smooth",
-  });
-});
+// const button5 = document.getElementById("segundo");
+// const acordion2 = document.getElementById("dos").getBoundingClientRect();
 
-const button7 = document.getElementById("cuarto");
-const acordion4 = document.getElementById("cuatro").getBoundingClientRect();
+// const button6 = document.getElementById("tercero");
+// const acordion3 = document.getElementById("tres").getBoundingClientRect();
 
-button7.addEventListener("click", (event) => {
-  window.scroll({
-    top: acordion4.top,
-    behavior: "smooth",
-  });
-});
+// const button7 = document.getElementById("cuarto");
+// const acordion4 = document.getElementById("cuatro").getBoundingClientRect();
+
+//button4.addEventListener("click", (event) => {
+  //window.scroll({
+    //top: acordion1.top,
+    //behavior: "smooth",
+  //});
+//});
+
+
+
+//button5.addEventListener("click", (event) => {
+//  window.scroll({
+//    top: acordion2.top,
+//    behavior: "smooth",
+//  });
+//});
+
+
+
+// button6.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: acordion3.top,
+//     behavior: "smooth",
+//   });
+// });
+
+
+
+// button7.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: acordion4.top,
+//     behavior: "smooth",
+//   });
+// });
 
 
 

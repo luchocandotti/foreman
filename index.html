@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOREMAN</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="./script.js"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +15,18 @@
     <meta property="og:description" content="Expert custom software implementation for AI-Driven business process automation"/>
 </head>
 <body>
-    <div id="movil">
+
+ <!--------------loader----------------->
+    <div id="loader" class="loader"><span class="loader-inner"></span></div>
+     <!------------------------------->
+
+        <div id="contentt" class="contentt">
+     <div id="movil">
         <li id="about-m"><a href="#">about us</a></li>
         <li id="services-m"><a href="#">services</a></li>
         <li id="contact-m"><a href="#">contact</a></li>
     </div>
+    
     <div id="container" class="container">
 <!-- menu -->
         <div class="top">
@@ -35,6 +41,7 @@
                 <li id="m"><a href="#">=</a></li>
             </ul>
         </div>
+        
 <!-- header -->
         <div class="intro">
             <div class="intro-txt">
@@ -103,6 +110,9 @@
             <div class="clr"></div>
         </div>
 <!-- services -->
+        
+            <h2>services</h2>
+            <p>We offer a wide range of services to help you achieve your business goals. From web development and design to marketing and sales support, we have the expertise and experience to deliver high-quality solutions that drive growth and success.</p>
         <h5 id="seccion-services">What can we do for you?</h5>
         <ul class="accordion">
             <li id="uno">
@@ -143,7 +153,7 @@
             </li>
             <hr>
         </ul>
-
+    
  <!-- contacto -->
         <section id="seccion-contact" class="contact-section">
             <div class="contact-container">
@@ -188,6 +198,8 @@
 <!-- fondop de textura -->
     <div class="texture"></div>
 
+</div>
+
     <script type="module">
         import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
       
@@ -218,6 +230,9 @@
           }
         });
       </script>
+
+<script type="module" src="./script.js"></script>
+
 
 
 </body>
