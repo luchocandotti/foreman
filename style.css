@@ -30,6 +30,7 @@ body{
     animation: loader 2s infinite ease;
     opacity: 1; 
     transition: opacity 1s ease;
+    z-index: 6;
     }
     
     .loader-inner {
@@ -38,6 +39,7 @@ body{
     width: 100%;
     background-color: #fff;
     animation: loader-inner 2s infinite ease-in;
+    z-index: 6;
     }
     
     @keyframes loader {
@@ -84,17 +86,29 @@ body{
     }
     }
 
-    .contentt {
+    /* .contentt {
         display: none; 
         opacity: 0; 
-        transition: opacity 1s ease; 
+        transition: opacity 10s ease; 
     }
     
     .contentt.show {
         display: block;
         opacity: 1; 
-    }
+    } */
 /*-----------------------------------*/
+/*TAPA*/
+#tapa{
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+    background-color: #131313;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    transition: all 1s ease-in-out;
+}
+
 
 /* FONDO IMAGEN TECLADO */
 .bg{

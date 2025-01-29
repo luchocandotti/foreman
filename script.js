@@ -8,7 +8,8 @@ window.onload = function() {
 
       setTimeout(function() {
           document.getElementById("loader").style.display = "none"; 
-          document.getElementById("contentt").classList.add("show"); 
+          // document.getElementById("contentt").classList.add("show");
+          document.getElementById("tapa").style.opacity = "0%"; 
       }, 1000); 
   }, 4000); 
 };
