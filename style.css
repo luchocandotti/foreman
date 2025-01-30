@@ -1,4 +1,3 @@
-/* esto resetea todo en la página */
 *{
     margin: 0;
     padding: 0;
@@ -16,8 +15,94 @@ body{
     font-family: "Albert Sans", sans-serif;
     font-size: 16pt;
     font-weight: normal;
-    line-height: 1.3em;
-    margin: 0;
+    line-height: 1.3em;;
+}
+/* ---------------LOADER-------------------*/
+.loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute; 
+    bottom: 48%; 
+    left: 48%; 
+    border: 4px solid #Ffff;
+    animation: loader 2s infinite ease;
+    opacity: 1; 
+    transition: opacity 1s ease;
+    z-index: 6;
+    }
+    
+    .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+    z-index: 6;
+    }
+    
+    @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+    }
+    
+    @keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+    }
+
+    .contentt {
+        opacity: 0;
+    }
+    
+    .contentt.show {
+        opacity: 1;
+    }
+/*-----------------------------------*/
+/*TAPA*/
+#tapa{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    background-color: #131313;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    transition: all 1s ease-in-out;
 }
 
 
@@ -34,7 +119,6 @@ body{
     top: 0px;
     z-index: -2;
     box-sizing: content-box;
-    transition: all 0.9s ease-in-out;
 }
 
 /* TEXTURA */
@@ -44,9 +128,11 @@ body{
     width: 100%;
     height: 100%;
     background-image: url(./img/for_bg_tx.jpg);
+    background-color: #9070A8;
     background-size: cover;
     background-position: center center;
     background-repeat: repeat;
+    /* SOLUCIONADOOOOOOOO */
     z-index: -1;
     box-sizing: content-box;
     mix-blend-mode: screen;
@@ -98,6 +184,7 @@ h5{
     font-size: 16pt;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -174,6 +261,7 @@ a{
     display: flex;
     justify-content:space-between;
     align-items:start;
+    z-index: 3;
 }
 /* MENU izquierda */
 .logo{
@@ -190,6 +278,7 @@ a{
 .logo img:hover{
     width: 300px;
     filter: blur(2px);
+    /* filter:drop-shadow(5px 5px 3px #00000053); */
 }
 
 /* MENU derecha */
@@ -312,6 +401,14 @@ a{
     justify-content: end;/* ubica los nombres abajo */
     height: 600px;
     margin: 50px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: #9070A8;
+    margin-left: -1px; hace que se superponga la línea y no quede doble */
+
     h2, p{
         text-align: center;
         margin: 10px;
@@ -381,6 +478,13 @@ a{
 
 
 /* TERCERA SECCION SERVICES */
+.services-txt{
+    width: 100%;
+    border: 1px solid #9070A8;
+    padding: 50px;
+    box-sizing:border-box;
+}
+
 .accordion{
     width: 100%;
     margin: 50px 0 50px 0;
@@ -443,11 +547,6 @@ input[type="radio"]{
     content: '-';
 }
 
-#cuatro .dos a{
-    font-size: 12pt;
-    font-weight: 400;
-}
-
 hr{
     border-width: 0.8px;
     border-style: solid;
@@ -460,6 +559,7 @@ hr{
 .contact-section {
     display: flex;
     align-items: center;
+    /* background-color: #9070A8; */
     box-sizing:border-box;
   }
   
@@ -537,7 +637,61 @@ hr{
     background: white;
   }
   
+/* .services{
+    width: 100%;
+    margin: 50px 0 100px 0;
+}
+.service{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
 
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: #9070A8;
+    margin-top: -1px;
+    cursor: pointer;
+    box-sizing:border-box;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+    
+    p{
+        width: 50%;
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
+    box-sizing:border-box;
+} */
+
+/* Ocultamos las tarjetas
+#card1, #card2, #card3, #card4{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.open{
+    font-size: 16pt;
+    font-weight: 300;
+    color: #9070A8;
+    transition: all 0.3s ease-in-out;
+}
+.service:hover{
+    h6,p,.open{
+    color: #FFFFFF;
+    }
+}
+*/
 
 
 /* RESPONSIVE */
@@ -563,7 +717,7 @@ hr{
         flex-direction: column;
         justify-content: left; 
     }
-    .about-txt{
+    .about-txt, .services-txt{
         width: 100%;
         margin-bottom: 30px;
         padding: 35px;
@@ -578,11 +732,30 @@ hr{
     .perfil{
         padding: 10px;
     }
-
+    /* .service{
+        padding: 0px;
+        height: 120px;
+    }
+    .cards{
+        flex-direction: column;
+        justify-content: left;
+        p{
+            width: 120%;
+            margin-left: -50px;
+        }
+    } */
     h5{
         font-size: 14pt;
     }
-
+    /* h6{
+        font-size: 22pt;
+        line-height: 22pt;
+        p{
+            font-size: 10pt;
+            line-height: 10pt;
+            margin-top: 10px;
+        }
+    } */
     .accordion li label {
         font-size: 22pt;
         line-height: 22pt;
