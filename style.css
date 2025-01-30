@@ -85,16 +85,13 @@ body{
     }
     }
 
-    /* .contentt {
-        display: none; 
+    .contentt {
         opacity: 0; 
-        transition: opacity 10s ease; 
     }
     
     .contentt.show {
-        display: block;
         opacity: 1; 
-    } */
+    }
 /*-----------------------------------*/
 /*TAPA*/
 #tapa{
