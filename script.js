@@ -1,5 +1,5 @@
 
-// ----------------hidden + loader----------
+// -----------hidden + loader----------
 
 
 window.onload = function() {
@@ -7,109 +7,151 @@ window.onload = function() {
       document.getElementById("loader").style.opacity = "0";
 
       setTimeout(function() {
-          document.getElementById("loader").style.display = "none"; 
+          document.getElementById("loader").style.display = "none";
           document.getElementById("contentt").classList.add("show");
-          document.getElementById("tapa").style.opacity = "0%"; 
-      }, 1000); 
-  }, 4000); 
+          document.getElementById("tapa").style.opacity = "0%";
+      }, 1000);
+  }, 4000);
 };
 
 //------------------------------------------
 
-//Botones del menu que llevan a las secciones
 
 
-window.scroll({
-  top: 0,
-  left: 0,
-  behavior: "smooth",
-});
-const button0 = document.getElementById("m");
+//Reubicar el scroll con menu
+
+const buttonm = document.getElementById('m');
 let sw = 1;
-button0.addEventListener("click", (event) => {
+buttonm.addEventListener("click", (event) => {
   if (sw==1) {
     document.getElementById('container').style.marginTop = "325px";
-    document.getElementById('movil').style.top = "0";
+    document.getElementById('back').style.top = "250px";
+    document.getElementById('movil').style.top = 0;
     document.getElementById("m").innerHTML = "<a href='#'>×</a>";
     sw = 2;
   } else {
     document.getElementById('movil').style.top = "-250px";
-    document.getElementById('container').style.marginTop = "0";
+    document.getElementById('container').style.marginTop = 0;
+    document.getElementById('back').style.top = 0;
     document.getElementById("m").innerHTML = "<a href='#'>=</a>";
     sw = 1;
   }
-  
-});
-  
-const button1 = document.getElementById("about");
-const about = document.getElementById("seccion-about").getBoundingClientRect();
-
-button1.addEventListener("click", (event) => {
-  window.scroll({
-    top: about.top-100,
-    behavior: "smooth",
-  });
-  console.log(about);
+    
 });
 
-const button1m = document.getElementById("about-m");
+const menumElements = [
+  { buttonId: "about-m", sectionId: "seccion-about" },
+  { buttonId: "services-m", sectionId: "seccion-services" },
+  { buttonId: "contact-m", sectionId: "seccion-contact" },
+];
 
-button1m.addEventListener("click", (event) => {
-  window.scroll({
-    top: about.top-50,
-    behavior: "smooth",
-  });
-  document.getElementById('movil').style.top = "-250px";
-  document.getElementById('container').style.marginTop = "0";
-  document.getElementById("m").innerHTML = "<a href='#'>=</a>";
-  sw = 1;
-});
+menumElements.forEach(({ buttonId, sectionId }) => {
+  const button = document.getElementById(buttonId);
+  const section = document.getElementById(sectionId);
 
-const button2 = document.getElementById("services");
-const services = document.getElementById("seccion-services").getBoundingClientRect();
-
-button2.addEventListener("click", (event) => {
-  window.scroll({
-    top: services.top-70,
-    behavior: "smooth",
+  button.addEventListener("click", (event) => {
+    const msectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+    window.scroll({
+      top: msectionPosition,
+      behavior: "smooth"
+    });
+    document.getElementById('movil').style.top = "-250px";
+    document.getElementById('container').style.marginTop = 0;
+    document.getElementById('back').style.top = 0;
+    document.getElementById("m").innerHTML = "<a href='#'>=</a>";
+    sw = 1;
   });
 });
 
-const button2m = document.getElementById("services-m");
+ const menuElements = [
+   { buttonId: "about", sectionId: "seccion-about" },
+   { buttonId: "services", sectionId: "seccion-services" },
+   { buttonId: "contact", sectionId: "seccion-contact" },
+ ];
 
-button2m.addEventListener("click", (event) => {
-  window.scroll({
-    top: services.top-25,
-    behavior: "smooth",
-  });
-  document.getElementById('movil').style.top = "-250px";
-  document.getElementById('container').style.marginTop = "0";
-  document.getElementById("m").innerHTML = "<a href='#'>=</a>";
-  sw = 1;
-});
+ menuElements.forEach(({ buttonId, sectionId }) => {
+   const button = document.getElementById(buttonId);
+   const section = document.getElementById(sectionId);
 
-const button3 = document.getElementById("contact");
-const contact = document.getElementById("seccion-contact").getBoundingClientRect();
+   button.addEventListener("click", (event) => {
+     const msectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+     window.scroll({
+       top: msectionPosition,
+       behavior: "smooth"
+     });
+   });
+ });
 
-button3.addEventListener("click", (event) => {
-  window.scroll({
-    top: contact.top,
-    behavior: "smooth",
-  });
-});
 
-const button3m = document.getElementById("contact-m");
+// const button1 = document.getElementById("about");
+// const about = document.getElementById("seccion-about").getBoundingClientRect();
 
-button3m.addEventListener("click", (event) => {
-  window.scroll({
-    top: services.top+200,
-    behavior: "smooth",
-  });
-  document.getElementById('movil').style.top = "-250px";
-  document.getElementById('container').style.marginTop = "0";
-  document.getElementById("m").innerHTML = "<a href='#'>=</a>";
-  sw = 1;
-});
+// button1.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: about.top-100,
+//     behavior: "smooth",
+//   });
+//   console.log(about);
+// });
+
+// const button1m = document.getElementById("about-m");
+
+// button1m.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: about.top-50,
+//     behavior: "smooth",
+//   });
+//   document.getElementById('movil').style.top = "-250px";
+//   document.getElementById('container').style.marginTop = "0";
+//   document.getElementById("m").innerHTML = "<a href='#'>=</a>";
+//   sw = 1;
+// });
+
+// const button2 = document.getElementById("services");
+// const services = document.getElementById("seccion-services").getBoundingClientRect();
+
+// button2.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: services.top-70,
+//     behavior: "smooth",
+//   });
+// });
+
+// const button2m = document.getElementById("services-m");
+
+// button2m.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: services.top-25,
+//     behavior: "smooth",
+//   });
+//   document.getElementById('movil').style.top = "-250px";
+//   document.getElementById('container').style.marginTop = "0";
+//   document.getElementById("m").innerHTML = "<a href='#'>=</a>";
+//   sw = 1;
+// });
+
+// const button3 = document.getElementById("contact");
+// const contact = document.getElementById("seccion-contact").getBoundingClientRect();
+
+// button3.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: contact.top,
+//     behavior: "smooth",
+//   });
+// });
+
+// const button3m = document.getElementById("contact-m");
+
+// button3m.addEventListener("click", (event) => {
+//   window.scroll({
+//     top: services.top+200,
+//     behavior: "smooth",
+//   });
+//   document.getElementById('movil').style.top = "-250px";
+//   document.getElementById('container').style.marginTop = "0";
+//   document.getElementById("m").innerHTML = "<a href='#'>=</a>";
+//   sw = 1;
+// });
 
 //Reubicar el scroll de los servicios
 
@@ -203,7 +245,7 @@ perfil.addEventListener("click", (event) => {
       element4.style.top = "80px";
       element4.style.zIndex = "-2";
       element4.style.opacity = "40%";
-    
+
       const element2 = document.getElementById("perfil1");
       element2.style.top = "120px";
       element2.style.zIndex = "-3";
@@ -219,17 +261,17 @@ perfil2.addEventListener("click", (event) => {
     element.style.top = "0px";
     element.style.zIndex = "0";
     element.style.opacity = "100%";
-    
+
     const element3 = document.getElementById("perfil4");
     element3.style.top = "40px";
     element3.style.zIndex = "-1";
     element3.style.opacity = "60%";
-    
+
     const element4 = document.getElementById("perfil1");
     element4.style.top = "80px";
     element4.style.zIndex = "-2";
     element4.style.opacity = "40%";
-    
+
     const element2 = document.getElementById("perfil2");
     element2.style.top = "120px";
     element2.style.zIndex = "-3";
@@ -245,17 +287,17 @@ perfil3.addEventListener("click", (event) => {
     element.style.top = "0px";
     element.style.zIndex = "0";
     element.style.opacity = "100%";
-    
+
     const element3 = document.getElementById("perfil1");
     element3.style.top = "40px";
     element3.style.zIndex = "-1";
     element3.style.opacity = "60%";
-    
+
     const element4 = document.getElementById("perfil2");
     element4.style.top = "80px";
     element4.style.zIndex = "-2";
     element4.style.opacity = "40%";
-    
+
     const element2 = document.getElementById("perfil3");
     element2.style.top = "120px";
     element2.style.zIndex = "-3";
@@ -271,17 +313,17 @@ perfil4.addEventListener("click", (event) => {
     element.style.top = "0px";
     element.style.zIndex = "0";
     element.style.opacity = "100%";
-    
+
     const element3 = document.getElementById("perfil2");
     element3.style.top = "40px";
     element3.style.zIndex = "-1";
     element3.style.opacity = "60%";
-    
+
     const element4 = document.getElementById("perfil3");
     element4.style.top = "80px";
     element4.style.zIndex = "-2";
     element4.style.opacity = "40%";
-    
+
     const element2 = document.getElementById("perfil4");
     element2.style.top = "120px";
     element2.style.zIndex = "-3";
