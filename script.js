@@ -9,7 +9,8 @@ window.onload = function() {
       setTimeout(function() {
           document.getElementById("loader").style.display = "none";
           document.getElementById("contentt").classList.add("show");
-          document.getElementById("tapa").style.opacity = "0%";
+        document.getElementById("tapa").style.opacity = 0;
+        document.getElementById("tapa").style.top = '-3000px';
       }, 1000);
   }, 4000);
 };
@@ -18,7 +19,7 @@ window.onload = function() {
 
 
 
-//Reubicar el scroll con menu
+//Abrir y Cerrar menu movil
 
 const buttonm = document.getElementById('m');
 let sw = 1;
@@ -36,9 +37,10 @@ buttonm.addEventListener("click", (event) => {
     document.getElementById("m").innerHTML = "<a href='#'>=</a>";
     sw = 1;
   }
-    
 });
 
+
+// Reubicar el scroll con menu movil
 const menumElements = [
   { buttonId: "about-m", sectionId: "seccion-about" },
   { buttonId: "services-m", sectionId: "seccion-services" },
@@ -52,7 +54,7 @@ menumElements.forEach(({ buttonId, sectionId }) => {
   button.addEventListener("click", (event) => {
     const msectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
     window.scroll({
-      top: msectionPosition,
+      top: msectionPosition-250,
       behavior: "smooth"
     });
     document.getElementById('movil').style.top = "-250px";
