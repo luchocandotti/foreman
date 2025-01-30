@@ -24,7 +24,7 @@ body{
     height: 50px;
     position: absolute; 
     bottom: 48%; 
-    left: 46%; 
+    left: 48%; 
     border: 4px solid #Ffff;
     animation: loader 2s infinite ease;
     opacity: 1; 
@@ -184,6 +184,7 @@ h5{
     font-size: 16pt;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -477,6 +478,13 @@ a{
 
 
 /* TERCERA SECCION SERVICES */
+.services-txt{
+    width: 100%;
+    border: 1px solid #9070A8;
+    padding: 50px;
+    box-sizing:border-box;
+}
+
 .accordion{
     width: 100%;
     margin: 50px 0 50px 0;
@@ -709,7 +717,7 @@ hr{
         flex-direction: column;
         justify-content: left; 
     }
-    .about-txt{
+    .about-txt, .services-txt{
         width: 100%;
         margin-bottom: 30px;
         padding: 35px;

@@ -78,7 +78,7 @@ menumElements.forEach(({ buttonId, sectionId }) => {
    button.addEventListener("click", (event) => {
      const msectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
      window.scroll({
-       top: msectionPosition,
+       top: msectionPosition-50,
        behavior: "smooth"
      });
    });
