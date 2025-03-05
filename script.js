@@ -3,14 +3,22 @@
 
 
 window.onload = function() {
+  // Bloquea el scroll
+  document.documentElement.style.overflow = "hidden"; 
+  document.body.style.overflow = "hidden";
+
   setTimeout(function() {
       document.getElementById("loader").style.opacity = "0";
 
       setTimeout(function() {
           document.getElementById("loader").style.display = "none";
           document.getElementById("contentt").classList.add("show");
-        document.getElementById("tapa").style.opacity = 0;
-        document.getElementById("tapa").style.top = '-3000px';
+          document.getElementById("tapa").style.opacity = 0;
+          document.getElementById("tapa").style.top = '-3000px';
+
+          // Habilita el scroll
+          document.documentElement.style.overflow = "auto"; 
+          document.body.style.overflow = "auto";
       }, 1000);
   }, 4000);
 };
@@ -52,7 +60,7 @@ menumElements.forEach(({ buttonId, sectionId }) => {
   const section = document.getElementById(sectionId);
 
   button.addEventListener("click", (event) => {
-    const msectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+    const msectionPosition = section.getBoundingClientRect().top;
     window.scroll({
       top: msectionPosition-250,
       behavior: "smooth"
@@ -76,7 +84,7 @@ menumElements.forEach(({ buttonId, sectionId }) => {
    const section = document.getElementById(sectionId);
 
    button.addEventListener("click", (event) => {
-     const msectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+     const msectionPosition = section.getBoundingClientRect().top;
      window.scroll({
        top: msectionPosition-50,
        behavior: "smooth"
