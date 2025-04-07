@@ -402,13 +402,6 @@ a{
     justify-content: end;/* ubica los nombres abajo */
     height: 600px;
     margin: 50px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    /* border-width: 1px 1px 1px 1px;
-    border-style: solid;
-    border-color: #9070A8;
-    margin-left: -1px; hace que se superponga la línea y no quede doble */
 
     h2, p{
         text-align: center;
@@ -565,7 +558,6 @@ hr{
 .contact-section {
     display: flex;
     align-items: center;
-    /* background-color: #9070A8; */
     box-sizing:border-box;
   }
   
@@ -643,61 +635,6 @@ hr{
     background: white;
   }
   
-/* .services{
-    width: 100%;
-    margin: 50px 0 100px 0;
-}
-.service{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    
-    align-items: center;
-    justify-content: space-between;
-
-    border-width: 1px 0px 1px 0px;
-    border-style: solid;
-    border-color: #9070A8;
-    margin-top: -1px;
-    cursor: pointer;
-    box-sizing:border-box;
-}
-
-.cards{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px;
-    
-    p{
-        width: 50%;
-        margin-right: 25px;
-        margin-bottom: 25px;
-    }
-    box-sizing:border-box;
-} */
-
-/* Ocultamos las tarjetas
-#card1, #card2, #card3, #card4{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-.open{
-    font-size: 16pt;
-    font-weight: 300;
-    color: #9070A8;
-    transition: all 0.3s ease-in-out;
-}
-.service:hover{
-    h6,p,.open{
-    color: #FFFFFF;
-    }
-}
-*/
 
 
 /* RESPONSIVE */
@@ -738,30 +675,11 @@ hr{
     .perfil{
         padding: 10px;
     }
-    /* .service{
-        padding: 0px;
-        height: 120px;
-    }
-    .cards{
-        flex-direction: column;
-        justify-content: left;
-        p{
-            width: 120%;
-            margin-left: -50px;
-        }
-    } */
+
     h5{
         font-size: 14pt;
     }
-    /* h6{
-        font-size: 22pt;
-        line-height: 22pt;
-        p{
-            font-size: 10pt;
-            line-height: 10pt;
-            margin-top: 10px;
-        }
-    } */
+
     .accordion li label {
         font-size: 22pt;
         line-height: 22pt;
