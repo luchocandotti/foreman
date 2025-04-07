@@ -23,9 +23,23 @@ window.onload = function() {
   }, 4000);
 };
 
+//Cargar por idioma
+
+(function () { /* esto es una función autoinvocada, sin nombre por eso se invoca al final con () */
+  var userLang = navigator.language.slice(0,2) || navigator.userLanguage.slice(0,2);
+  
+      if (userLang == 'pt' && window.location.pathname != '/indexPt.html') {
+          window.location.href = 'indexPt.html';
+      } else if (userLang == 'es' && window.location.pathname != '/indexEs.html') {
+        window.location.href = 'indexEs.html';
+      } else if (userLang == 'en' && window.location.pathname != '/index.html') {
+        window.location.href = 'indexEs.html';
+    };
+  //alert("The language is: " + userLang);
+  //console.log(window.location);
+  })();
+
 //------------------------------------------
-
-
 
 //Abrir y Cerrar menu movil
 
