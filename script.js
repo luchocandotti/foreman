@@ -3,17 +3,26 @@
 
 
 window.onload = function() {
+  // Bloquea el scroll
+  document.documentElement.style.overflow = "hidden"; 
+  document.body.style.overflow = "hidden";
+
   setTimeout(function() {
       document.getElementById("loader").style.opacity = "0";
 
       setTimeout(function() {
           document.getElementById("loader").style.display = "none";
           document.getElementById("contentt").classList.add("show");
-        document.getElementById("tapa").style.opacity = 0;
-        document.getElementById("tapa").style.top = '-3000px';
+          document.getElementById("tapa").style.opacity = 0;
+          document.getElementById("tapa").style.top = '-3000px';
+
+          // Habilita el scroll
+          document.documentElement.style.overflow = "auto"; 
+          document.body.style.overflow = "auto";
       }, 1000);
   }, 4000);
 };
+
 
 //------------------------------------------
 
@@ -330,4 +339,23 @@ perfil4.addEventListener("click", (event) => {
     element2.style.top = "120px";
     element2.style.zIndex = "-3";
     element2.style.opacity = "20%";
+});
+
+
+///////////////// Botón Volver Arriba////////////////////
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 1500) {
+        scrollTopBtn.style.display = "flex";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
